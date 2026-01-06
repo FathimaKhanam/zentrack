@@ -1,3 +1,9 @@
+## 🌐 Live Demo
+
+**Try the app:** [https://fathimakhanam.github.io/zentrack/]
+
+> Click the link above to see the live application in action!
+
 # 🌙 ZenTrack: Sleep & Focus Optimization Platform
 
 A gamified productivity tracker that helps users monitor sleep patterns and focus sessions while making habit tracking fun and engaging.
