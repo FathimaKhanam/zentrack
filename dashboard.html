@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ZenTrack</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container fade-in">
+        <h1>Your Zen Dashboard 🌟</h1>
+        <button onclick="logoutUser()">Escape Pod (Logout)</button>
+        <div id="gamification">
+            <p>Zen Points: <span id="points">0</span> | Level: <span id="level">Couch Potato</span></p>
+            <progress id="progress" value="0" max="100"></progress>
+            <div id="badges"></div>
+        </div>
+        <button id="relaxButton">Relax Mode (Ambient Vibes) 🌊</button>
+        <audio id="relaxAudio" src="calm-waves.mp3"></audio>
+        
+        <h2>Log Sleep 😴</h2>
+        <form id="sleepForm">
+            <label for="bedtime">Bedtime:</label>
+            <input type="datetime-local" id="bedtime" required>
+            
+            <label for="waketime">Wake Time:</label>
+            <input type="datetime-local" id="waketime" required>
+            
+            <label for="quality">Quality (1-10):</label>
+            <input type="number" id="quality" min="1" max="10" required>
+            
+            <button type="submit">Log & Earn Points!</button>
+        </form>
+        
+        <h2>Log Focus/Work 🔍</h2>
+        <form id="focusForm">
+            <label for="starttime">Start Time:</label>
+            <input type="datetime-local" id="starttime" required>
+            
+            <label for="endtime">End Time:</label>
+            <input type="datetime-local" id="endtime" required>
+            
+            <label for="productivity">Productivity (1-10):</label>
+            <input type="number" id="productivity" min="1" max="10" required>
+            
+            <label>Environmental Factors:</label>
+            <div class="chips">
+                <span class="chip" onclick="addEnv('Noisy 📢')">Noisy 📢</span>
+                <span class="chip" onclick="addEnv('Dim Light 💡')">Dim Light 💡</span>
+                <span class="chip" onclick="addEnv('Cozy ☕')">Cozy ☕</span>
+            </div>
+            <textarea id="environment" required></textarea>
+            
+            <button type="submit">Log & Level Up!</button>
+        </form>
+        
+        <a href="insights.html">Unlock Insights & Badges</a>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        checkSession();
+        updateGamification();
+        document.getElementById('sleepForm').addEventListener('submit', logSleep);
+        document.getElementById('focusForm').addEventListener('submit', logFocus);
+        document.getElementById('relaxButton').addEventListener('click', toggleRelax);
+    </script>
+</body>
+</html>

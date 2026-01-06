@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ZenTrack: Sleep & Focus Fun Zone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container fade-in">
+        <h1>ZenTrack: Sleep Like a Boss, Focus Like a Ninja! 🥷</h1>
+        <p class="fun-tag">Track your way to chill vibes and epic productivity. No stress, just success!</p>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required title="Your super-secret email">
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" required title="Shh... keep it fun!">
+            
+            <button type="submit">Beam Me In! 🚀</button>
+        </form>
+        <p>New here? <a href="register.html">Join the Fun Squad</a>.</p>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', loginUser);
+    </script>
+</body>
+</html>

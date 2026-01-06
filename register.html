@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ZenTrack: Sleep & Focus Fun Zone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container fade-in">
+        <h1>Join ZenTrack: Where Productivity Meets Playtime! 🎉</h1>
+        <p class="fun-tag">Unlock badges, points, and zen—because adulting should be fun.</p>
+        <form id="registerForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" required>
+            
+            <button type="submit">Start the Adventure!</button>
+        </form>
+        <p>Already in? <a href="index.html">Login to Level Up</a>.</p>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', registerUser);
+    </script>
+</body>
+</html>

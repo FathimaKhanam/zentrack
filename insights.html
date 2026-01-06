@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights - ZenTrack</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container fade-in">
+        <h1>Your Zen Insights 🧠</h1>
+        <button onclick="logoutUser()">Logout</button>
+        <div id="gamification">
+            <p>Zen Points: <span id="points">0</span> | Level: <span id="level">Couch Potato</span></p>
+            <progress id="progress" value="0" max="100"></progress>
+            <div id="badges"></div>
+        </div>
+        
+        <h2>Sleep Insights 😴</h2>
+        <canvas id="sleepChart" width="400" height="200"></canvas>
+        <div id="sleepInsights"></div>
+        
+        <h2>Focus Insights 🔍</h2>
+        <canvas id="focusChart" width="400" height="200"></canvas>
+        <div id="focusInsights"></div>
+        
+        <div id="suggestions"></div>
+        
+        <a href="dashboard.html">Back to Dashboard</a>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        checkSession();
+        updateGamification();
+        displayInsights();
+    </script>
+</body>
+</html>
